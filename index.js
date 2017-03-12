@@ -13,17 +13,10 @@ const schema = new GraphQLSchema({
     query: AppGraphQLQueryType
 });
 
-/*function getUsers() {
-    console.log('http://strip.loc/api/admin/girls/');
-
-    return fetch('http://strip.loc/api/admin/girls/')
-        .then(res => res.json());
-}*/
-
 async function getUsers() {
     console.log('http://strip.loc/api/admin/girls/');
 
-    let response = await fetch('http://strip.loc/api/admin/girls/');
+    const response = await fetch('http://strip.loc/api/admin/girls/');
 
     return response.json();
 }

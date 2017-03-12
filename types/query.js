@@ -29,8 +29,7 @@ export const AppGraphQLQueryType = new GraphQLObjectType({
                 id: { type : new GraphQLNonNull(GraphQLString) }
             },
             async resolve(root, {id}, {loaders}) {
-                let data = await loaders.user.load(id);
-                console.log(data);
+                const data = await loaders.user.load(id);
 
                 return data[id];
             }
